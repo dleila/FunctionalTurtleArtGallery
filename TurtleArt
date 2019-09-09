@@ -1,0 +1,80 @@
+import turtle
+turtle.speed(40)
+
+def pentagon(sidelength):
+    for i in range(5):
+        turtle.forward(sidelength)
+        turtle.right(70)
+def pentagonSpiral():
+    for i in range(40):
+        pentagon(i*5)
+        turtle.right(5)
+turtle.color("dodger blue")
+pentagonSpiral()
+
+def hexagon(sidelength):
+    for i in range(6):
+        turtle.forward(sidelength)
+        turtle.right(60)
+def hexagonSpiral():
+    for i in range(40):
+        hexagon(i*5)
+        turtle.right(5)
+turtle.penup()
+turtle.goto(-280,-180)
+turtle.color("cornflower blue")
+turtle.pendown()
+hexagonSpiral()
+
+def line(sidelength):
+    for i in range(4):
+        turtle.forward(sidelength)
+        turtle.right(180)
+def lineSpiral():
+    for i in range(40):
+        line(i*5)
+        turtle.right(5)
+turtle.penup()
+turtle.color("royal blue")
+turtle.goto(10,300)
+turtle.pendown()
+lineSpiral()
+
+def triangle(sidelength):
+    for i in range(6):
+        turtle.forward(sidelength)
+        turtle.right(120)
+def triangleSpiral():
+    for i in range(40):
+        triangle(i*5)
+        turtle.right(5)
+turtle.penup()
+turtle.goto(-200,180)
+turtle.color("steel blue")
+turtle.pendown()
+triangleSpiral()
+
+turtle.goto(-150,100)
+turtle.color("orchid")
+turtle.pendown()
+pentagonSpiral()
+
+turtle.penup()
+turtle.goto(200,180)
+turtle.color("medium orchid")
+turtle.pendown()
+hexagonSpiral()
+
+turtle.penup()
+turtle.color("dark orchid")
+turtle.goto(130,170)
+turtle.pendown()
+lineSpiral()
+
+turtle.penup()
+turtle.goto(200,-250)
+turtle.color("steel blue")
+turtle.pendown()
+triangleSpiral()
+
+turtle.exitonclick()
